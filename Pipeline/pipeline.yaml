@@ -1,8 +1,11 @@
+trigger:
+- none
+
 pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- bash: ./Cake/run-build.sh
+- bash: $(System.DefaultWorkingDirectory)/Cake/run-build.sh
 - task: PublishCodeCoverageResults@2
   inputs:
     codeCoverageTool: 'cobertura'
