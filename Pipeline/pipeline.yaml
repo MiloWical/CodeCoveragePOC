@@ -6,7 +6,7 @@ pool:
 
 steps:
 - script: $(System.DefaultWorkingDirectory)/Cake/run-build.sh
-- task: PublishCodeCoverageResults@2
+- task: PublishCodeCoverageResults@1
   inputs:
     codeCoverageTool: 'cobertura'
     summaryFileLocation: $(System.DefaultWorkingDirectory)/**/coverage-results/results-*.cobertura.xml
