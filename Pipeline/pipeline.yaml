@@ -5,9 +5,7 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- bash: |
-  cd $(System.DefaultWorkingDirectory)/Cake \
-  && ./run-build.sh
+- bash: cd $(System.DefaultWorkingDirectory)/Cake && ./run-build.sh
 - task: PublishCodeCoverageResults@1
   inputs:
     codeCoverageTool: 'cobertura'
