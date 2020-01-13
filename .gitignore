@@ -306,9 +306,10 @@ paket-files/
 __pycache__/
 *.pyc
 
-# Cake - Uncomment if you are using it
-# tools/**
-# !tools/packages.config
+# Cake
+Cake/coverage-results/
+Cake/tools/**
+!Cake/tools/packages.config
 
 # Tabs Studio
 *.tss
